@@ -1,0 +1,23 @@
+Server:
+  port: 8001
+
+mybatis:
+  config-location*: classpath:conf/mybatis.cfg.xml
+  type-aliases-package: com.test.sc.entities
+  mapper-locations:
+    - classpath:com/**/*Mapper.xml
+
+spring:
+  application:
+    name: service_8001
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://10.255.16.83:3306/testdb?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: 4214170
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 2007
